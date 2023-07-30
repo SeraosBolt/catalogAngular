@@ -1,20 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { GetProdutosService } from 'src/app/services/get-produtos.service';
+
 
 @Component({
   selector: 'app-nav-produtos',
   templateUrl: './nav-produtos.component.html',
   styleUrls: ['./nav-produtos.component.css']
 })
-export class NavProdutosComponent {
+export class NavProdutosComponent implements OnInit {
 
-  constructor(public getProdutosService: GetProdutosService){
-
+  constructor(public getProdutosService: GetProdutosService) {
   }
 
-  getAllProducts(){
+  ngOninit() {
+    this.getAllProducts();
+  }
+
+  getAllProducts() {
     this.getProdutosService.getAll()
-    .then(products => console.log(products));
+      .then(products => console.log(products));
   }
 
 
