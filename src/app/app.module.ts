@@ -11,6 +11,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { CarrouselHomeComponent } from './components/carrousel-home/carrousel-home.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NavProdutosComponent } from './components/nav-produtos/nav-produtos.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { NavProdutosComponent } from './components/nav-produtos/nav-produtos.com
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
